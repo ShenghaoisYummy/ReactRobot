@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css'
 import Robot from "./components/Robot"
 import robots from "./mockdata/robots.json"
 
 function App() {
   return (
-    <ul>
+    <div className={styles.app}>
+      <div className={styles.robotList}>
       {robots.map(robots => <Robot id={robots.id} name={robots.name} email={robots.email} />)}
-    </ul>
+      </div>
+    </div>
   );
 }
 
