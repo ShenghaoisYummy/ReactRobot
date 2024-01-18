@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const defaultContextvalue = {
+  username: 'Austin'
+}
+
+export const appContext = React.createContext(defaultContextvalue);
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

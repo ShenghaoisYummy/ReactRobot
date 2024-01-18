@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import styles from './App.module.css'
 import Robot from "./components/Robot"
 import logo from "./assests/images/logo.svg"
@@ -22,13 +22,10 @@ useEffect(() => {
     const data = await response.json();
     setRobotGallery(data);
     setisLoading(false);
-
   }
-
   fetchData();
 },[])
 
-  
     return (
       <div className={styles.app}>
         <div className={styles.appHeader}>
